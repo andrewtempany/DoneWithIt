@@ -1,50 +1,65 @@
-import React from 'react';
+import React from "react";
+import Colours from "../config/colours";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
+import AppButton from "../components/AppButton";
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
+      blurRadius={2}
       style={styles.background}
       source={require("../assets/background.jpg")}
-    > 
-    <View style={styles.logoBox}> 
-    <Image
-    style={styles.logo}
-    source={require('../assets/logo-red.png')
-    }/>
-    <Text>Sell What You Don't Need</Text>
-    </View>
-    <View style={styles.loginButton}></View>
-    <View style={styles.registerButton}></View>
+    >
+      <View style={styles.logoBox}>
+        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
+        <Text style={styles.tagLine}>Sell What You Don't Need</Text>
+      </View>
+      <View style={styles.buttonContainer}>
+        <AppButton
+          title="login"
+          onPress={() => console.log("login")}
+          colour="primary"
+        />
+      </View>
+      <View style={styles.buttonContainer}>
+        <AppButton
+          title="register"
+          onPress={() => console.log("register")}
+          colour="secondary"
+        />
+      </View>
     </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   background: {
-    flex: 1, 
+    flex: 1,
     justifyContent: "flex-end",
-    alignItems: "center"
+    alignItems: "center",
   },
-  loginButton: {
+  buttonContainer: {
     width: "100%",
     height: 70,
-    backgroundColor: "#fc5c65"
-  },
-  registerButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: "#4ecdc4"
+    paddingHorizontal: "5%",
+    paddingBottom: "5%",
+    alignItems: "center",
+    justifyContent: "center",
   },
   logo: {
     height: 100,
-    width: 100, 
+    width: 100,
   },
   logoBox: {
     position: "absolute",
     top: 150,
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
+  tagLine: {
+    fontSize: 20,
+    fontWeight: "600",
+    paddingVertical: 20,
+  },
 });
 
 export default WelcomeScreen;

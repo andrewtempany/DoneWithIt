@@ -1,4 +1,5 @@
 import React from "react";
+import Colours from "../config/colours"
 
 import { Image, StyleSheet, View, StatusBar } from "react-native";
 
@@ -24,7 +25,7 @@ function ViewImageScreen(props) {
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: "black",
+        backgroundColor: Colours.black,
         flex: 1
     },
     image: {
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     },
     backButton: {
         position: "absolute",
-        backgroundColor: "#fc5c65",
+        backgroundColor: Colours.primary,
         top: 30,
         left: 30,
         height: 50,
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     },
     deleteButton: {
         position: "absolute",
-        backgroundColor: "#4ecdc4",
+        backgroundColor: Colours.secondary,
         top: 30,
         right: 30,
         height: 50,
