@@ -1,5 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Image, Text } from "react-native";
+import ListItem from '../components/ListItem'
 import colours from "../config/colours";
 
 function ListingDetailsScreen({
@@ -17,13 +18,11 @@ function ListingDetailsScreen({
         <Text style={Styles.title}>{title}</Text>
         <Text style={Styles.subtitle}>{subtitle}</Text>
       </View>
-      <View style={Styles.profileContainer}>
-        <Image source={profilePic} style={Styles.profilePic}></Image>
-        <View style={Styles.profileTextContainer}>
-          <Text>{profileName}</Text>
-          <Text style={Styles.profileSubtext}>{listings}</Text>
-        </View>
-      </View>
+      <ListItem
+        profilePic={profilePic}
+        title={profileName}
+        subtitle={listings}
+      />
     </View>
   );
 }

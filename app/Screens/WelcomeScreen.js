@@ -5,30 +5,32 @@ import AppButton from "../components/AppButton";
 
 function WelcomeScreen(props) {
   return (
-    <ImageBackground
-      blurRadius={2}
-      style={styles.background}
-      source={require("../assets/background.jpg")}
-    >
-      <View style={styles.logoBox}>
-        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text style={styles.tagLine}>Sell What You Don't Need</Text>
-      </View>
-      <View style={styles.buttonContainer}>
-        <AppButton
-          title="login"
-          onPress={() => console.log("login")}
-          colour="primary"
-        />
-      </View>
-      <View style={styles.buttonContainer}>
-        <AppButton
-          title="register"
-          onPress={() => console.log("register")}
-          colour="secondary"
-        />
-      </View>
-    </ImageBackground>
+    <View style={styles.imageContainer}>
+      <ImageBackground
+        blurRadius={2}
+        style={styles.background}
+        source={require("../assets/background.jpg")}
+      >
+        <View style={styles.logoBox}>
+          <Image style={styles.logo} source={require("../assets/logo-red.png")} />
+          <Text style={styles.tagLine}>Sell What You Don't Need</Text>
+        </View>
+        <View style={styles.buttonContainer}>
+          <AppButton
+            title="login"
+            onPress={() => console.log("login")}
+            colour="primary"
+          />
+        </View>
+        <View style={styles.buttonContainer}>
+          <AppButton
+            title="register"
+            onPress={() => console.log("register")}
+            colour="secondary"
+          />
+        </View>
+      </ImageBackground>
+    </View>
   );
 }
 
@@ -45,6 +47,10 @@ const styles = StyleSheet.create({
     paddingBottom: "5%",
     alignItems: "center",
     justifyContent: "center",
+  },
+  imageContainer: {
+    flex: 1,
+    backgroundColor: Colours.black
   },
   logo: {
     height: 100,
