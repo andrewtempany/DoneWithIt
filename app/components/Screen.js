@@ -1,6 +1,6 @@
 import React from 'react'
 import Constants from 'expo-constants'
-import { StyleSheet, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView, StatusBar } from 'react-native';
 
 function Screen({ children }) {
     return (
@@ -12,7 +12,8 @@ function Screen({ children }) {
 
 const Styles = StyleSheet.create({
     screen: {
-        paddingTop: Constants.statusBarHeight
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        flex: 1,
     }
 })
 

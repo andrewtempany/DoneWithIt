@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import ListingDetailsScreen from "./app/Screens/ListingDetailsScreen";
 import MessagesScreen from "./app/Screens/MessagesScreen";
+import AccountScreen from './app/Screens/AccountScreen'
 
 // import AppText from "./app/components/AppText";
 // import Colours from "./app/config/colours";
@@ -27,8 +28,12 @@ export default function App() {
   //   </View>
   // );
 
+  // return (
+  //   <MessagesScreen />
+  // );
+
   return (
-    <MessagesScreen />
+    <AccountScreen />
   );
 }
 
