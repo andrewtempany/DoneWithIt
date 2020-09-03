@@ -6,3 +6,4 @@ Built in React Native as a learning project.
 
 
 <img src="https://raw.githubusercontent.com/andrewtempany/DoneWithIt/master/app/assets/Screenshot2.jpg" width="256"  title="Welcome Screen">
+<img src="https://raw.githubusercontent.com/andrewtempany/DoneWithIt/master/app/assets/Screenshot1.jpg" width="256"  title="Listing Screen">
